@@ -1,19 +1,24 @@
-{% extends 'layout.html' %}
 {% load static %}
 
 {% block head %}
 
-<link rel="stylesheet" href="{% static 'css/reset.css' %}">
 <link rel="stylesheet" href="{% static 'css/reset.css' %}">
 
 {% endblock %}
 
 
 {% block contents %}
-sample 페이지 입니다
+
+샘플 페이지 입니다
+
+{% for sample in samples %}
+    {{ sample.title }}
+{% endfor %}
+
+
+
 {% endblock %}
 
 
 {% block js %}
-
 {% endblock %}

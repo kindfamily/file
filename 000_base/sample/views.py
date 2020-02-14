@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from .models import Sample
 
-# Create your views here.
 def sample(request):
-    return render(request, 'sample/index.html')
+    sample = Sample.objects.all()
+    return render(request, 'sample/index.html', {
+        'samples' : sample,
+    })

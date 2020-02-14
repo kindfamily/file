@@ -1,26 +1,39 @@
 mkdir instaclone
 cd instaclone
-pip3 install virtualenv
-virtualenv myvenv
-pip3 list
-pip3 install django
-pip3 list
+pip install virtualenv
+virtualenv venv
+pip list
+pip install django
+pip list
 django-admin startproject config .
 
 settings.py에서 28번째줄 '*'
 python manage.py migrate
+
+User 모델 추적해 보기
+venv/~site-package/django/contrib/auth/models.py
+
 python manage.py runserver 0:80
+
+sqlite.db 내용 확인해보기
+python manage.py createsuperuser
+내용 추가된내용 확인해보기
+
+python manage.py startapp sample
+
+models 생성후 
+python manage.py shell 명령으로 crud 실습
 
 -- jupyter notebook --
 pip install django-extensions
-pip3 install "ipython[notebook]"
 
 settings.py 수정
 INSTALLED_APPS = [
+'sample',
 'django_extensions',
 ]
 
-
+pip3 install "ipython[notebook]"
 python3 manage.py shell_plus --notebook
 
 

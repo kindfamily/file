@@ -1,5 +1,6 @@
 mkdir instaclone
 cd instaclone
+pip list
 pip3 install virtualenv
 virtualenv venv
 source venv/bin/activate
@@ -14,13 +15,11 @@ python manage.py runserver 0:80
 python manage.py createsuperuser
 
 pip install pillow
-pip install pilkit
 pip install django-imagekit
 pip install django-allauth
 
 본격적인 앱 생성 작업
 python manage.py startapp accounts
-python manage.py startapp post
 
 settings.py 수정
 INSTALLED_APPS = [
@@ -34,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'accounts',
 
 ]
 
