@@ -62,6 +62,42 @@
     // ajax
 
 
+
+    const add = document.querySelector('.trigger');
+    // const remove = document.querySelector('.remove');
+    // const stage = document.querySelector('#stage');
+
+
+    // ajax
+
+
+    function clickFunc() {
+
+        $.ajax({
+            type:'post',
+            url:"../data/comment.html",
+            data:37,
+            dataType:'html',
+            success : (response)=>{
+                stage.insertAdjacentHTML('afterbegin',response);
+
+            },
+            error: (err)=>{
+                alert('login plz');
+
+
+            }
+
+        });
+
+
+    }
+
+
+    add.addEventListener('click', clickFunc);
+
+
+
 </script>
 </body>
 </html>

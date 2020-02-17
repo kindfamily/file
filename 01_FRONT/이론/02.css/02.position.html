@@ -4,6 +4,41 @@
     <meta charset="UTF-8">
     <title>position</title>
 
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            top: 50px;
+            left: 300px;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: dodgerblue;
+        }
+
+        .wrap{
+            width: 600px;
+            height: 600px;
+            background: hotpink;
+            position:relative;
+        }
+
+        .wrap .list01{
+            width: 100px;
+            height: 100px;
+            background: orange;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /*right: ;*/
+            /*margin-left:-50px;*/
+            /*margin-top: -50px;*/
+            transform:translate(-50%,-50%);
+        }
+    </style>
 </head>
 <body>
 
@@ -12,8 +47,15 @@
 
 
 
+<div class="box"></div>
+<div class="box2"></div>
+
+<hr>
 
 
+<div class="wrap">
+    <div class="list01"></div>
+</div>
 
 
 

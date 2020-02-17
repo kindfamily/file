@@ -286,7 +286,9 @@ function addMorePostAjax(data, textStatus, jqXHR) {
 }
 
 setTimeout(function () {
+
     scrollTo(0, 0)
+
 }, 100);
 
 
